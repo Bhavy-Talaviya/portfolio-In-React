@@ -1,9 +1,9 @@
 import React from 'react'
 import { motion } from 'framer-motion'
 import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
 import NetworkBackground from './NetworkBackground'
 import Resume from '../assets/Resume/Resume.png'
-
 
 const Hero = () => {
     return (
@@ -64,9 +64,9 @@ const Hero = () => {
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">
-                        <a href="#contact" className="px-8 py-3 rounded-full bg-gradient-to-r from-neon-pink to-purple-600 text-white font-bold shadow-lg shadow-neon-pink/30 hover:shadow-neon-pink/50 transform hover:-translate-y-1 transition-all text-center">
+                        <Link to="#contact" className="px-8 py-3 rounded-full bg-gradient-to-r from-neon-pink to-purple-600 text-white font-bold shadow-lg shadow-neon-pink/30 hover:shadow-neon-pink/50 transform hover:-translate-y-1 transition-all text-center">
                             Contact Me
-                        </a>
+                        </Link>
                         <a
                             href={Resume}
                             target='_blank'
