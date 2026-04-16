@@ -1,5 +1,6 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaInstagram } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { SiLeetcode } from 'react-icons/si';
 
 const Footer = () => {
     return (
@@ -14,10 +15,15 @@ const Footer = () => {
                     <a href="https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
                         <FaLinkedin />
                     </a>
+                    <a href="https://www.youtube.com/@BhavyTalaviya04" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
+                        <FaYoutube />
+                    </a>
+                    <a href="https://leetcode.com/u/n3WlMDVyNf/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
+                        <SiLeetcode />
+                    </a>
                     <a href="https://x.com/BhavyTalaviya04" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
                         <FaTwitter />
                     </a>
-                    {/* Add more social links here if needed */}
                 </div>
 
                 <p className="text-sm">

@@ -1,6 +1,7 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import NetworkBackground from './NetworkBackground'
 import Resume from '../assets/Resume/Resume.png'
@@ -47,6 +48,8 @@ const Hero = () => {
                         {[
                             { Icon: FaGithub, href: "https://github.com/Bhavy-Talaviya" },
                             { Icon: FaLinkedin, href: "https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" },
+                            { Icon: FaYoutube, href: "https://www.youtube.com/@BhavyTalaviya04" },
+                            { Icon: SiLeetcode, href: "https://leetcode.com/u/n3WlMDVyNf/" },
                             { Icon: FaTwitter, href: "https://x.com/BhavyTalaviya04" },
 
                         ].map(({ Icon, href }, index) => (
