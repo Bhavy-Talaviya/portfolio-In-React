@@ -10,6 +10,7 @@ const Education = () => {
             year: "2025 - Present",
             degree: "BACHELOR DEGREE",
             institution: "Swaminarayan University x codingGita",
+            description: "Currently Pursuing B.Tech with a focus on Full-Stack Development, Data Structures, and Software Engineering."
         },
         {
             year: "2024 - 2025",
@@ -100,9 +101,12 @@ const Education = () => {
                                                 <h3 className="text-xl md:text-2xl font-bold text-white uppercase tracking-tight mb-2 group-hover:text-emerald-300 transition-colors">
                                                     {edu.degree}
                                                 </h3>
-                                                <p className="text-gray-400 font-medium text-lg flex items-center gap-2">
+                                                <p className="text-gray-400 font-medium text-lg flex items-center gap-2 mb-3">
                                                     <span className="w-1.5 h-1.5 rounded-full bg-gray-500 inline-block" />
                                                     {edu.institution}
+                                                </p>
+                                                <p className="text-gray-400 text-sm italic border-l-2 border-emerald-500/30 pl-4">
+                                                    {edu.description}
                                                 </p>
                                             </div>
 

@@ -94,8 +94,8 @@ const Contact = () => {
                         <div className="bg-white/5 backdrop-blur-xl p-8 rounded-3xl border border-white/10 shadow-lg hover:border-neon-pink/30 transition-colors">
                             <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
                             <div className="space-y-6">
-                                <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
-                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-green-400 relative">
+                                <div className="flex items-start space-x-4 text-gray-300 hover:text-white transition-colors">
+                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-green-400 relative mt-1 flex-shrink-0">
                                         <FaBriefcase size={20} />
                                         <span className="absolute top-0 right-0 w-3 h-3 bg-green-500 rounded-full animate-pulse border-2 border-[#1e293b]" />
                                     </div>
@@ -104,17 +104,17 @@ const Contact = () => {
                                         <p className="text-lg font-medium">Available for Work</p>
                                     </div>
                                 </div>
-                                <a href="mailto:bhavytalaviya04@gmail.com" className="flex items-center space-x-4 text-gray-300 hover:text-neon-pink transition-colors group">
-                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-neon-pink group-hover:bg-neon-pink/20 transition-all">
+                                <a href="mailto:bhavytalaviya04@gmail.com" className="flex items-start space-x-4 text-gray-300 hover:text-neon-pink transition-colors group">
+                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-neon-pink group-hover:bg-neon-pink/20 transition-all mt-1 flex-shrink-0">
                                         <FaEnvelope size={20} />
                                     </div>
-                                    <div>
+                                    <div className="min-w-0">
                                         <p className="text-sm text-gray-500 group-hover:text-gray-400 transition-colors">Email</p>
-                                        <p className="text-lg font-medium">bhavytalaviya04@gmail.com</p>
+                                        <p className="text-lg font-medium break-all">bhavytalaviya04@gmail.com</p>
                                     </div>
                                 </a>
-                                <a href="tel:+919429218355" className="flex items-center space-x-4 text-gray-300 hover:text-purple-400 transition-colors group">
-                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-purple-400 group-hover:bg-purple-400/20 transition-all">
+                                <a href="tel:+919429218355" className="flex items-start space-x-4 text-gray-300 hover:text-purple-400 transition-colors group">
+                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-purple-400 group-hover:bg-purple-400/20 transition-all mt-1 flex-shrink-0">
                                         <FaPhone size={20} />
                                     </div>
                                     <div>
@@ -122,8 +122,8 @@ const Contact = () => {
                                         <p className="text-lg font-medium">+91 9429218355</p>
                                     </div>
                                 </a>
-                                <a href="https://wa.me/919429218355" target="_blank" rel="noopener noreferrer" className="flex items-center space-x-4 text-gray-300 hover:text-green-400 transition-colors group">
-                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366]/20 transition-all">
+                                <a href="https://wa.me/919429218355" target="_blank" rel="noopener noreferrer" className="flex items-start space-x-4 text-gray-300 hover:text-green-400 transition-colors group">
+                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-[#25D366] group-hover:bg-[#25D366]/20 transition-all mt-1 flex-shrink-0">
                                         <FaWhatsapp size={20} />
                                     </div>
                                     <div>
@@ -131,8 +131,8 @@ const Contact = () => {
                                         <p className="text-lg font-medium">+91 9429218355</p>
                                     </div>
                                 </a>
-                                <div className="flex items-center space-x-4 text-gray-300 hover:text-white transition-colors">
-                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-cyan-400">
+                                <div className="flex items-start space-x-4 text-gray-300 hover:text-white transition-colors">
+                                    <div className="w-12 h-12 bg-white/10 rounded-full flex items-center justify-center text-cyan-400 mt-1 flex-shrink-0">
                                         <FaMapMarkerAlt size={20} />
                                     </div>
                                     <div>
