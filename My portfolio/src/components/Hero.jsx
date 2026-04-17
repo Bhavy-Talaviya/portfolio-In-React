@@ -1,10 +1,10 @@
 import React from 'react'
 import { motion } from 'framer-motion'
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa'
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFigma } from 'react-icons/fa'
 import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import NetworkBackground from './NetworkBackground'
-import Resume from '../assets/Resume/Resume.png'
+import Resume from '../assets/Resume/Resume.pdf'
 
 const Hero = () => {
     return (
@@ -50,6 +50,7 @@ const Hero = () => {
                             { Icon: FaLinkedin, href: "https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" },
                             { Icon: FaYoutube, href: "https://www.youtube.com/@BhavyTalaviya04" },
                             { Icon: SiLeetcode, href: "https://leetcode.com/u/n3WlMDVyNf/" },
+                            { Icon: FaFigma, href: "https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1" },
                             { Icon: FaTwitter, href: "https://x.com/BhavyTalaviya04" },
 
                         ].map(({ Icon, href }, index) => (
@@ -74,18 +75,10 @@ const Hero = () => {
                             href={Resume}
                             target='_blank'
                             rel="noopener noreferrer"
-                            onClick={(e) => {
-                                // Create a temporary link to trigger download
-                                const link = document.createElement('a');
-                                link.href = Resume;
-                                link.download = 'Shape_Resume';
-                                document.body.appendChild(link);
-                                link.click();
-                                document.body.removeChild(link);
-                            }}
+                            download="Bhavy_Talaviya_Resume.pdf"
                             className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold shadow-lg hover:bg-white/20 hover:scale-105 transition-all text-center cursor-pointer"
                         >
-                            Get Resume
+                            View Resume
                         </a>
                     </div>
                 </motion.div>

@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaGithub, FaLinkedin, FaTwitter, FaYoutube } from 'react-icons/fa';
+import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFigma } from 'react-icons/fa';
 import { SiLeetcode } from 'react-icons/si';
 
 const Footer = () => {
@@ -20,6 +20,9 @@ const Footer = () => {
                     </a>
                     <a href="https://leetcode.com/u/n3WlMDVyNf/" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
                         <SiLeetcode />
+                    </a>
+                    <a href="https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
+                        <FaFigma />
                     </a>
                     <a href="https://x.com/BhavyTalaviya04" target="_blank" rel="noopener noreferrer" className="hover:text-neon-pink transition-colors duration-300">
                         <FaTwitter />
