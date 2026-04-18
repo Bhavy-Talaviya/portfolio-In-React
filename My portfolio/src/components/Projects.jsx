@@ -131,6 +131,8 @@ const Projects = () => {
                                                 <img
                                                     src={project.image}
                                                     alt={project.title}
+                                                    loading="lazy"
+                                                    decoding="async"
                                                     className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                                 />
                                             )}
@@ -254,6 +256,8 @@ const Projects = () => {
                                                         <img
                                                             src={design.image}
                                                             alt={design.title}
+                                                            loading="lazy"
+                                                            decoding="async"
                                                             className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                                                         />
                                                         <div className="absolute inset-0 bg-neon-pink/10 opacity-0 group-hover:opacity-100 transition-opacity flex items-center justify-center">

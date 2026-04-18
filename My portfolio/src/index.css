@@ -1,15 +1,22 @@
-html {
-  scroll-behavior: smooth;
+/* Force font-display: swap to prevent FOIT (Flash of Invisible Text) */
+@layer base {
+  @font-face {
+    font-family: 'Inter';
+    font-display: swap;
+  }
 }
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
+
 :root {
   --color-bg: #0f172a;
   --color-text: #f8fafc;
+  scroll-behavior: smooth;
 }
+
 
 body {
   @apply bg-slate-900 text-white font-sans overflow-x-hidden;

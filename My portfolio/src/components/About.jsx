@@ -28,7 +28,9 @@ const About = () => {
                             <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl">
                                 <img
                                     src={profileImg}
-                                    alt="Profile"
+                                    alt="Bhavy Talaviya - FullStack Developer"
+                                    loading="lazy"
+                                    decoding="async"
                                     className="w-full h-auto object-cover transform md:scale-100 group-hover:scale-105 grayscale group-hover:grayscale-0 transition-all duration-500"
                                 />
                             </div>

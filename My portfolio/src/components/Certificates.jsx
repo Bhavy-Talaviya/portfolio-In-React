@@ -94,6 +94,8 @@ const Certificates = () => {
                                         <img
                                             src={cert.image}
                                             alt={cert.title}
+                                            loading="lazy"
+                                            decoding="async"
                                             className="w-full h-full object-contain bg-slate-900/50 transition-transform duration-700 group-hover:scale-105"
                                         />
                                     )}
@@ -158,6 +160,8 @@ const Certificates = () => {
                                     <img
                                         src={selectedCert.image}
                                         alt={selectedCert.title}
+                                        loading="lazy"
+                                        decoding="async"
                                         className="max-h-[50vh] md:max-h-[70vh] w-auto object-contain rounded-lg shadow-2xl"
                                     />
                                 )}
