@@ -18,6 +18,15 @@
     <!-- ===================== FAVICON ===================== -->
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
+    <!-- ===================== CRITICAL CSS (inline) ===================== -->
+    <!-- Prevents white flash and unblocks initial paint without waiting for the CSS bundle -->
+    <style>
+      *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+      html{scroll-behavior:smooth}
+      body{background:#0f172a;color:#f8fafc;font-family:Inter,system-ui,-apple-system,sans-serif;overflow-x:hidden}
+      #root{min-height:100vh}
+    </style>
+
     <!-- ===================== OPEN GRAPH (Facebook / LinkedIn) ===================== -->
     <meta property="og:type" content="website" />
     <meta property="og:url" content="https://bhavy-talaviya-portfolio-smoky.vercel.app/" />
@@ -53,8 +62,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" crossorigin />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <!-- Preconnect for skill icons CDN (saves 90ms LCP per Lighthouse) -->
+    <!-- skillicons.dev serves font/SVG assets via CORS — crossorigin is correct here -->
     <link rel="preconnect" href="https://skillicons.dev" crossorigin />
-    <link rel="preconnect" href="https://cdni.iconscout.com" crossorigin />
+    <!-- cdni.iconscout.com serves plain images (no CORS) — no crossorigin to avoid "Unused preconnect" warning -->
+    <link rel="preconnect" href="https://cdni.iconscout.com" />
 
     <!-- Preload Inter font — used by Tailwind's font-sans -->
     <link

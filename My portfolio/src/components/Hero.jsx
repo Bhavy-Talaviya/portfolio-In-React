@@ -45,7 +45,7 @@ const Hero = () => {
                         Passionate about building scalable web applications and crafting intuitive user experiences using modern technologies.
                     </p>
 
-                    <div className="flex justify-center lg:justify-start gap-6 text-2xl text-gray-400">
+                    <ul className="flex justify-center lg:justify-start gap-6 text-2xl text-gray-400 list-none p-0 m-0" aria-label="Social media links">
                         {[
                             { Icon: FaGithub,   href: "https://github.com/Bhavy-Talaviya",                                                                              label: "GitHub profile" },
                             { Icon: FaLinkedin, href: "https://www.linkedin.com/in/bhavy-talaviya-9961673a1/",                                                          label: "LinkedIn profile" },
@@ -54,18 +54,19 @@ const Hero = () => {
                             { Icon: FaFigma,    href: "https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1",               label: "Figma designs" },
                             { Icon: FaTwitter,  href: "https://x.com/BhavyTalaviya04",                                                                                  label: "Twitter / X profile" },
                         ].map(({ Icon, href, label }, index) => (
-                            <a
-                                key={index}
-                                href={href}
-                                target="_blank"
-                                rel="noopener noreferrer"
-                                aria-label={label}
-                                className="hover:text-neon-pink hover:scale-110 transition-all duration-300"
-                            >
-                                <Icon aria-hidden="true" />
-                            </a>
+                            <li key={index}>
+                                <a
+                                    href={href}
+                                    target="_blank"
+                                    rel="noopener noreferrer"
+                                    aria-label={label}
+                                    className="hover:text-neon-pink hover:scale-110 transition-all duration-300 inline-block"
+                                >
+                                    <Icon aria-hidden="true" />
+                                </a>
+                            </li>
                         ))}
-                    </div>
+                    </ul>
 
                     {/* Buttons */}
                     <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start pt-4">

@@ -8,33 +8,35 @@ const NetworkBackground = () => {
         const ctx = canvas.getContext('2d');
         let animationFrameId;
         let particles = [];
+        let isVisible = true;
 
-        // Cache dimensions to avoid forced reflow on every resize read
+        // Cache dimensions — written from ResizeObserver, read in animate()
         let canvasW = 0;
         let canvasH = 0;
-        let resizeTimeout;
 
-        const resizeCanvas = () => {
-            // Debounce resize to avoid thrashing
-            clearTimeout(resizeTimeout);
-            resizeTimeout = setTimeout(() => {
-                // Read layout once, then write — avoids forced reflow
-                canvasW = window.innerWidth;
-                canvasH = window.innerHeight;
-                canvas.width = canvasW;
-                canvas.height = canvasH;
-                // Re-init particles for new canvas size
-                init();
-            }, 100);
+        const setSize = (w, h) => {
+            // Batch: read (from observer entry) then write — no forced reflow
+            canvasW = w;
+            canvasH = h;
+            canvas.width = w;
+            canvas.height = h;
+            init();
         };
 
-        // Initial size — read before animation starts
-        canvasW = window.innerWidth;
-        canvasH = window.innerHeight;
-        canvas.width = canvasW;
-        canvas.height = canvasH;
+        // ResizeObserver delivers size without querying layout itself
+        const ro = new ResizeObserver((entries) => {
+            const entry = entries[0];
+            const { width, height } = entry.contentRect;
+            setSize(Math.round(width), Math.round(height));
+        });
+        ro.observe(canvas);
 
-        window.addEventListener('resize', resizeCanvas, { passive: true });
+        // Pause animation when canvas is off-screen (e.g. tab hidden)
+        const io = new IntersectionObserver(
+            ([entry]) => { isVisible = entry.isIntersecting; },
+            { threshold: 0 }
+        );
+        io.observe(canvas);
 
         class Particle {
             constructor() {
@@ -63,7 +65,6 @@ const NetworkBackground = () => {
 
         const init = () => {
             particles = [];
-            // Cap particle count — fewer particles = less reflow pressure
             const density = Math.floor((canvasW * canvasH) / 8000);
             const count = Math.min(density, 80); // Hard cap at 80
             for (let i = 0; i < count; i++) {
@@ -72,6 +73,9 @@ const NetworkBackground = () => {
         };
 
         const animate = () => {
+            animationFrameId = requestAnimationFrame(animate);
+            if (!isVisible) return; // skip paint when off-screen
+
             ctx.clearRect(0, 0, canvasW, canvasH);
 
             for (let i = 0; i < particles.length; i++) {
@@ -81,10 +85,10 @@ const NetworkBackground = () => {
                 for (let j = i + 1; j < particles.length; j++) {
                     const dx = particles[i].x - particles[j].x;
                     const dy = particles[i].y - particles[j].y;
-                    // Use squared distance — avoids expensive Math.sqrt
+                    // Squared distance avoids expensive Math.sqrt
                     const distSq = dx * dx + dy * dy;
 
-                    if (distSq < 10000) { // 100^2
+                    if (distSq < 10000) { // 100px threshold
                         const dist = Math.sqrt(distSq);
                         ctx.beginPath();
                         ctx.strokeStyle = `rgba(100, 255, 218, ${0.1 - dist / 1000})`;
@@ -95,23 +99,21 @@ const NetworkBackground = () => {
                     }
                 }
             }
-            animationFrameId = requestAnimationFrame(animate);
         };
 
-        init();
         animate();
 
         return () => {
-            window.removeEventListener('resize', resizeCanvas);
-            clearTimeout(resizeTimeout);
             cancelAnimationFrame(animationFrameId);
+            ro.disconnect();
+            io.disconnect();
         };
     }, []);
 
     return (
         <canvas
             ref={canvasRef}
-            style={{ willChange: 'contents' }}
+            style={{ willChange: 'transform' }}
             className="absolute top-0 left-0 w-full h-full pointer-events-none z-0"
         />
     );

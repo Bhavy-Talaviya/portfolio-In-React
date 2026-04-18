@@ -46,9 +46,14 @@ const Navbar = () => {
                     <div className="-mr-2 flex md:hidden">
                         <button
                             onClick={() => setIsOpen(!isOpen)}
+                            aria-label={isOpen ? 'Close navigation menu' : 'Open navigation menu'}
+                            aria-expanded={isOpen}
+                            aria-controls="mobile-menu"
                             className="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-white/10 focus:outline-none"
                         >
-                            {isOpen ? <FaTimes size={24} /> : <FaBars size={24} />}
+                            {isOpen
+                                ? <FaTimes size={24} aria-hidden="true" />
+                                : <FaBars  size={24} aria-hidden="true" />}
                         </button>
                     </div>
                 </div>

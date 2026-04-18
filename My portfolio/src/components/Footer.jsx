@@ -8,26 +8,38 @@ const Footer = () => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col items-center gap-4">
 
                 {/* Social Icons */}
-                <div className="flex gap-6 text-xl" role="list" aria-label="Social media links">
-                    <a href="https://github.com/Bhavy-Talaviya" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="hover:text-neon-pink transition-colors duration-300">
-                        <FaGithub aria-hidden="true" />
-                    </a>
-                    <a href="https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="hover:text-neon-pink transition-colors duration-300">
-                        <FaLinkedin aria-hidden="true" />
-                    </a>
-                    <a href="https://www.youtube.com/@BhavyTalaviya04" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel" className="hover:text-neon-pink transition-colors duration-300">
-                        <FaYoutube aria-hidden="true" />
-                    </a>
-                    <a href="https://leetcode.com/u/n3WlMDVyNf/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile" className="hover:text-neon-pink transition-colors duration-300">
-                        <SiLeetcode aria-hidden="true" />
-                    </a>
-                    <a href="https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1" target="_blank" rel="noopener noreferrer" aria-label="Figma designs" className="hover:text-neon-pink transition-colors duration-300">
-                        <FaFigma aria-hidden="true" />
-                    </a>
-                    <a href="https://x.com/BhavyTalaviya04" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X profile" className="hover:text-neon-pink transition-colors duration-300">
-                        <FaTwitter aria-hidden="true" />
-                    </a>
-                </div>
+                <ul className="flex gap-6 text-xl list-none p-0 m-0" aria-label="Social media links">
+                    <li>
+                        <a href="https://github.com/Bhavy-Talaviya" target="_blank" rel="noopener noreferrer" aria-label="GitHub profile" className="hover:text-neon-pink transition-colors duration-300">
+                            <FaGithub aria-hidden="true" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn profile" className="hover:text-neon-pink transition-colors duration-300">
+                            <FaLinkedin aria-hidden="true" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.youtube.com/@BhavyTalaviya04" target="_blank" rel="noopener noreferrer" aria-label="YouTube channel" className="hover:text-neon-pink transition-colors duration-300">
+                            <FaYoutube aria-hidden="true" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://leetcode.com/u/n3WlMDVyNf/" target="_blank" rel="noopener noreferrer" aria-label="LeetCode profile" className="hover:text-neon-pink transition-colors duration-300">
+                            <SiLeetcode aria-hidden="true" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1" target="_blank" rel="noopener noreferrer" aria-label="Figma designs" className="hover:text-neon-pink transition-colors duration-300">
+                            <FaFigma aria-hidden="true" />
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://x.com/BhavyTalaviya04" target="_blank" rel="noopener noreferrer" aria-label="Twitter / X profile" className="hover:text-neon-pink transition-colors duration-300">
+                            <FaTwitter aria-hidden="true" />
+                        </a>
+                    </li>
+                </ul>
 
                 <p className="text-sm">
                     &copy; {new Date().getFullYear()} Bhavy Talaviya. All rights reserved.

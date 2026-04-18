@@ -6,18 +6,20 @@ export default defineConfig({
   plugins: [react()],
 
   build: {
-    // CSS code splitting — each chunk gets its own CSS file,
-    // so only the CSS needed for visible components is loaded first
+    // CSS code splitting — lazy chunks bring only their own CSS
     cssCodeSplit: true,
 
     // Target modern browsers for smaller output
     target: 'esnext',
 
-    // Minify with esbuild (fast + effective)
+    // Minify JS with esbuild (fast + effective)
     minify: 'esbuild',
 
-    // Raise the inline limit so small assets get inlined (avoids extra requests)
-    assetsInlineLimit: 4096,
+    // Minify CSS — reduces the render-blocking CSS bundle size
+    cssMinify: true,
+
+    // Inline small assets (< 8 KiB) to avoid extra requests
+    assetsInlineLimit: 8192,
 
     rollupOptions: {
       output: {
