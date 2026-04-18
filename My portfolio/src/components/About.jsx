@@ -26,13 +26,25 @@ const About = () => {
                             {/* Decorative Border/Frame */}
                             <div className="absolute inset-0 bg-gradient-to-r from-neon-pink to-purple-600 rounded-2xl blur opacity-30 group-hover:opacity-60 transition-opacity duration-300" />
                             <div className="relative rounded-2xl overflow-hidden border-2 border-white/10 bg-white/5 backdrop-blur-sm shadow-2xl">
-                                <img
-                                    src={profileImg}
-                                    alt="Bhavy Talaviya - FullStack Developer"
-                                    loading="lazy"
-                                    decoding="async"
-                                    className="w-full h-auto object-cover transform md:scale-100 group-hover:scale-105 grayscale group-hover:grayscale-0 transition-all duration-500"
-                                />
+                                {/* Use <picture> for responsive + WebP delivery */}
+                                <picture>
+                                    <source
+                                        type="image/webp"
+                                        srcSet={profileImg}
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 448px"
+                                    />
+                                    <img
+                                        src={profileImg}
+                                        alt="Bhavy Talaviya - FullStack Developer"
+                                        loading="lazy"
+                                        decoding="async"
+                                        fetchPriority="low"
+                                        width="448"
+                                        height="560"
+                                        sizes="(max-width: 768px) 90vw, (max-width: 1024px) 50vw, 448px"
+                                        className="w-full h-auto object-cover transform md:scale-100 group-hover:scale-105 grayscale group-hover:grayscale-0 transition-all duration-500"
+                                    />
+                                </picture>
                             </div>
                         </div>
                     </motion.div>

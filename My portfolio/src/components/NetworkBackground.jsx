@@ -1,9 +1,16 @@
-import { useRef, useEffect } from 'react';
+import { useRef, useEffect, useState } from 'react';
+
+// Skip the canvas animation on mobile — eliminates the biggest CPU/reflow cost
+const isMobile = () => window.matchMedia('(max-width: 768px)').matches;
 
 const NetworkBackground = () => {
     const canvasRef = useRef(null);
+    const [mobile] = useState(isMobile);
 
     useEffect(() => {
+        // Don't run the animation on mobile at all
+        if (mobile) return;
+
         const canvas = canvasRef.current;
         const ctx = canvas.getContext('2d');
         let animationFrameId;
@@ -108,7 +115,10 @@ const NetworkBackground = () => {
             ro.disconnect();
             io.disconnect();
         };
-    }, []);
+    }, [mobile]);
+
+    // On mobile: render nothing — no canvas, no animation loop, no GPU cost
+    if (mobile) return null;
 
     return (
         <canvas

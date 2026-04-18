@@ -62,7 +62,12 @@ const Education = () => {
                             <div className="absolute inset-0 bg-neon-pink/20 blur-[100px] rounded-full" />
                             <img
                                 src="https://cdni.iconscout.com/illustration/premium/thumb/web-development-2974925-2477356.png"
-                                alt="Isometric Tech Illustration"
+                                alt="Web development illustration"
+                                loading="lazy"
+                                decoding="async"
+                                fetchPriority="low"
+                                width="617"
+                                height="424"
                                 className="relative z-10 w-full h-auto drop-shadow-2xl hover:scale-105 transition-transform duration-500"
                             />
                         </div>

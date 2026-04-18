@@ -19,12 +19,16 @@
     <link rel="icon" type="image/svg+xml" href="/vite.svg" />
 
     <!-- ===================== CRITICAL CSS (inline) ===================== -->
-    <!-- Prevents white flash and unblocks initial paint without waiting for the CSS bundle -->
+    <!-- Covers above-the-fold paint: prevents white flash + layout shift before CSS bundle arrives -->
     <style>
       *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
       html{scroll-behavior:smooth}
       body{background:#0f172a;color:#f8fafc;font-family:Inter,system-ui,-apple-system,sans-serif;overflow-x:hidden}
       #root{min-height:100vh}
+      /* Navbar placeholder — prevents layout shift before Tailwind CSS loads */
+      nav{position:fixed;top:0;width:100%;z-index:50;background:rgba(15,23,42,0.8)}
+      /* Hero section — dark bg visible immediately */
+      section{position:relative}
     </style>
 
     <!-- ===================== OPEN GRAPH (Facebook / LinkedIn) ===================== -->
