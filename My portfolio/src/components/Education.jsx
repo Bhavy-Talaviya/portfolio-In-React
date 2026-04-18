@@ -15,7 +15,7 @@ const Education = () => {
         {
             year: "2024 - 2025",
             degree: "HIGHER SECONDARY CERTIFICATE",
-            institution: "Vidhyaguru Science School",
+            institution: "Vidhyaguru Science School(Amreli)",
         },
         {
             year: "2022 - 2023",
