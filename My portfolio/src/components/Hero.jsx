@@ -5,8 +5,8 @@ import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import NetworkBackground from './NetworkBackground'
 
-// Resume hosted on Google Drive
-const RESUME_URL = 'https://drive.google.com/file/d/17P-rn20eUxF2kdn2VEkFGiwts-gJ-6EW/view?usp=sharing'
+// Google Drive direct download URL (uc?export=download triggers auto-download)
+const RESUME_URL = 'https://drive.google.com/uc?export=download&id=17P-rn20eUxF2kdn2VEkFGiwts-gJ-6EW'
 
 const Hero = () => {
     return (
@@ -76,7 +76,8 @@ const Hero = () => {
                             href={RESUME_URL}
                             target='_blank'
                             rel="noopener noreferrer"
-                            aria-label="View Bhavy Talaviya's resume on Google Drive"
+                            download="Bhavy_Talaviya_Resume.pdf"
+                            aria-label="Download Bhavy Talaviya's resume"
                             className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold shadow-lg hover:bg-white/20 hover:scale-105 transition-all text-center cursor-pointer"
                         >
                             View Resume
