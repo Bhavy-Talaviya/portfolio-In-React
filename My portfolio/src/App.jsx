@@ -38,13 +38,15 @@ function App() {
       {/* SEO: dynamically updates <title> and meta tags per section */}
       <SEO />
       <Navbar />
-      <section id="home"><Hero /></section>
-      <About />
-      <Skills />
-      <Education />
-      <Projects />
-      <Certificates />
-      <Contact />
+      <main id="main-content">
+        <section id="home"><Hero /></section>
+        <About />
+        <Skills />
+        <Education />
+        <Projects />
+        <Certificates />
+        <Contact />
+      </main>
       <Footer />
     </div>
   )

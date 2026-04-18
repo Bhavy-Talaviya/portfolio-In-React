@@ -43,25 +43,24 @@ const Hero = () => {
                         Passionate about building scalable web applications and crafting intuitive user experiences using modern technologies.
                     </p>
 
-                    {/* Social Icons */}
                     <div className="flex justify-center lg:justify-start gap-6 text-2xl text-gray-400">
                         {[
-                            { Icon: FaGithub, href: "https://github.com/Bhavy-Talaviya" },
-                            { Icon: FaLinkedin, href: "https://www.linkedin.com/in/bhavy-talaviya-9961673a1/" },
-                            { Icon: FaYoutube, href: "https://www.youtube.com/@BhavyTalaviya04" },
-                            { Icon: SiLeetcode, href: "https://leetcode.com/u/n3WlMDVyNf/" },
-                            { Icon: FaFigma, href: "https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1" },
-                            { Icon: FaTwitter, href: "https://x.com/BhavyTalaviya04" },
-
-                        ].map(({ Icon, href }, index) => (
+                            { Icon: FaGithub,   href: "https://github.com/Bhavy-Talaviya",                                                                              label: "GitHub profile" },
+                            { Icon: FaLinkedin, href: "https://www.linkedin.com/in/bhavy-talaviya-9961673a1/",                                                          label: "LinkedIn profile" },
+                            { Icon: FaYoutube,  href: "https://www.youtube.com/@BhavyTalaviya04",                                                                       label: "YouTube channel" },
+                            { Icon: SiLeetcode, href: "https://leetcode.com/u/n3WlMDVyNf/",                                                                             label: "LeetCode profile" },
+                            { Icon: FaFigma,    href: "https://www.figma.com/design/CyiyxcK05S2dwKRAHJ8EW2/Untitled?node-id=68-2&t=5Y96G1nHrXL8W8i3-1",               label: "Figma designs" },
+                            { Icon: FaTwitter,  href: "https://x.com/BhavyTalaviya04",                                                                                  label: "Twitter / X profile" },
+                        ].map(({ Icon, href, label }, index) => (
                             <a
                                 key={index}
                                 href={href}
                                 target="_blank"
                                 rel="noopener noreferrer"
+                                aria-label={label}
                                 className="hover:text-neon-pink hover:scale-110 transition-all duration-300"
                             >
-                                <Icon />
+                                <Icon aria-hidden="true" />
                             </a>
                         ))}
                     </div>

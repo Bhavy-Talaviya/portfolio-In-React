@@ -122,6 +122,7 @@ const Projects = () => {
                                             href={project.live}
                                             target="_blank"
                                             rel="noopener noreferrer"
+                                            aria-label={`View ${project.title} live demo`}
                                             className="aspect-video w-full overflow-hidden relative block"
                                         >
                                             {/* Image or Gradient Placeholder */}
@@ -156,26 +157,29 @@ const Projects = () => {
                                                     href={project.live}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`${project.title} live demo`}
                                                     className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-gradient-to-r from-neon-pink to-purple-600 text-white font-bold text-xs shadow-lg shadow-neon-pink/20 transition-transform hover:scale-105 active:scale-95"
                                                 >
-                                                    <FaExternalLinkAlt /> Live
+                                                    <FaExternalLinkAlt aria-hidden="true" /> Live
                                                 </a>
                                                 <a
                                                     href={project.github}
                                                     target="_blank"
                                                     rel="noopener noreferrer"
+                                                    aria-label={`${project.title} GitHub repository`}
                                                     className="flex-1 flex items-center justify-center gap-2 py-2.5 rounded-xl bg-white/10 text-white font-bold text-xs border border-white/20 transition-all hover:bg-white/20 hover:scale-105 active:scale-95"
                                                 >
-                                                    <FaGithub /> GitHub
+                                                    <FaGithub aria-hidden="true" /> GitHub
                                                 </a>
                                                 {project.video && (
                                                     <a
                                                         href={project.video}
                                                         target="_blank"
                                                         rel="noopener noreferrer"
+                                                        aria-label={`${project.title} demo video on YouTube`}
                                                         className="w-full flex items-center justify-center gap-2 py-2.5 rounded-xl bg-red-600/20 text-red-500 font-bold text-xs border border-red-500/20 transition-all hover:bg-red-600/30 hover:scale-105 active:scale-95"
                                                     >
-                                                        <FaYoutube /> Watch Demo
+                                                        <FaYoutube aria-hidden="true" /> Watch Demo
                                                     </a>
                                                 )}
                                             </div>
