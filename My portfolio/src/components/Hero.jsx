@@ -4,7 +4,9 @@ import { FaGithub, FaLinkedin, FaTwitter, FaYoutube, FaFigma } from 'react-icons
 import { SiLeetcode } from 'react-icons/si'
 import { Link } from 'react-router-dom'
 import NetworkBackground from './NetworkBackground'
-import Resume from '../assets/Resume/Resume.pdf'
+
+// Resume hosted on Google Drive
+const RESUME_URL = 'https://drive.google.com/file/d/17P-rn20eUxF2kdn2VEkFGiwts-gJ-6EW/view?usp=sharing'
 
 const Hero = () => {
     return (
@@ -71,10 +73,10 @@ const Hero = () => {
                             Contact Me
                         </Link>
                         <a
-                            href={Resume}
+                            href={RESUME_URL}
                             target='_blank'
                             rel="noopener noreferrer"
-                            download="Bhavy_Talaviya_Resume.pdf"
+                            aria-label="View Bhavy Talaviya's resume on Google Drive"
                             className="px-8 py-3 rounded-full bg-white/10 backdrop-blur-md border border-white/20 text-white font-bold shadow-lg hover:bg-white/20 hover:scale-105 transition-all text-center cursor-pointer"
                         >
                             View Resume
