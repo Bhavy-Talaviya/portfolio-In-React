@@ -70,6 +70,10 @@ const Skills = () => {
                                     <img
                                         src={`https://skillicons.dev/icons?i=${skill.icon}`}
                                         alt={skill.name}
+                                        loading="lazy"
+                                        decoding="async"
+                                        width="80"
+                                        height="80"
                                         className="w-full h-full object-contain relative z-10 drop-shadow-[0_0_10px_rgba(255,255,255,0.1)] group-hover:drop-shadow-[0_0_20px_#D946EF]"
                                     />
                                 </div>
