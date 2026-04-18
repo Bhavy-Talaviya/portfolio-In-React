@@ -9,6 +9,7 @@ import Projects from './components/Projects'
 import Certificates from './components/Certificates'
 import Contact from './components/Contact'
 import Footer from './components/Footer'
+import SEO from './components/SEO'
 
 
 function App() {
@@ -34,8 +35,10 @@ function App() {
 
   return (
     <div>
+      {/* SEO: dynamically updates <title> and meta tags per section */}
+      <SEO />
       <Navbar />
-      <Hero />
+      <section id="home"><Hero /></section>
       <About />
       <Skills />
       <Education />

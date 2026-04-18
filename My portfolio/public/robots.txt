@@ -1,0 +1,8 @@
+# robots.txt — Bhavy Talaviya Portfolio
+# https://www.robotstxt.org/robotstxt.html
+
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://bhavy-talaviya-portfolio-smoky.vercel.app/sitemap.xml
