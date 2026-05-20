@@ -1,11 +1,11 @@
-# 🚀 My Portfolio Website
+# 🚀 My Portfolio Website:-
 
 Welcome to my personal portfolio website built using **React.js**.
 This project showcases my skills, projects, and experience as a developer.
 
 ---
 
-## 📌 Features
+## 📌 Features:-
 
 * ✨ Modern and responsive UI
 * 📱 Fully mobile-friendly design
@@ -17,7 +17,7 @@ This project showcases my skills, projects, and experience as a developer.
 
 ---
 
-## 🛠️ Tech Stack
+## 🛠️ Tech Stack:-
 
 * ⚛️ React.js
 * 🎨 CSS / Tailwind CSS / SCSS
@@ -26,7 +26,7 @@ This project showcases my skills, projects, and experience as a developer.
 
 ---
 
-## 📬 Contact Me
+## 📬 Contact Me:-
 
 * 💼 LinkedIn: https://www.linkedin.com/in/bhavy-talaviya-9961673a1/
 * 📧 Email: bhavy.talaviya.cg@gmail.com
